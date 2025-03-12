@@ -1,7 +1,5 @@
 package no.hvl.dat110.messages;
 
-import no.hvl.dat110.common.TODO;
-
 public class PublishMsg extends Message {
 	
 	private String topic;
@@ -16,19 +14,21 @@ public class PublishMsg extends Message {
 	public String getTopic() {
         return topic;
     }
+
     public void setTopic(String topic) {
         this.topic = topic;
     }
     
+    public String getMessage() {
+        return message;
+    }
+
     public void setMessage(String message) {
         this.message = message;
     }
 
     public String toString() {
-    	return "PublishMsg [topic=" + topic + "]" + super.toString();
+        return "PublishMsg [topic=" + topic + ", message=" + message + "] " + super.toString();
     }
-	
-	public String getMessage() {
-		return toString() + message;
-	}
 }
+
